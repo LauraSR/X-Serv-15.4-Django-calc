@@ -3,26 +3,26 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def suma(request, op1, op2):
-    suma = int(op1) + int(op2)
-return HttpResponse("Resultado: " op1 + " + " + op2 + " = " + str(suma))
+def suma(request, num1, num2):
+    suma = int(num1) + int(num2)
+    return HttpResponse("Resultado: " num1 + " + " + num2 + " = " + str(suma))
 
-def resta(request, op1, op2):
-    resta = int(op1) - int(op2)
-    return HttpResponse("Resultado: " op1 + " - " + op2 + " = " + str(resta))
+def resta(request, num1, num2):
+    resta = int(num1) - int(num2)
+    return HttpResponse("Resultado: " num1 + " - " + num2 + " = " + str(resta))
 
 
-def multi(request, op1, op2):
-    multi = int(op) * int(op)
-    return HttpResponse("Resultado: " op + " * " + op2 + " = " + str(multi))
+def multi(request, num1, num2):
+    multi = int(num1) * int(num2)
+    return HttpResponse("Resultado: " op + " * " + num2 + " = " + str(multi))
 
-def divi(request, op1, op2):
+def divi(request, num1, num2):
     try:
-        divi = int(op1) / int(op2)
+        divi = int(num1) / int(num2)
     except ZeroDivisionError:
         return HttpResponse("No puedes dividir entre 0")
 
-    return HttpResponse("Resultado: " op1 + " / " + op2 + " = " + str(divi))
+    return HttpResponse("Resultado: " num1 + " / " + num2 + " = " + str(divi))
 
 def error(request):
     return HttpResponse('Not Found')
