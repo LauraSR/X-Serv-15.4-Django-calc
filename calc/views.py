@@ -25,4 +25,4 @@ def divi(request, op1, op2):
     return HttpResponse("Resultado: " op1 + " / " + op2 + " = " + str(divi))
 
 def error(request):
-    return HttpResponse('Introduzca la operación que quiere realizar')
+    return HttpResponse('Not Found')
